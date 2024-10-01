@@ -10,10 +10,10 @@
 }
 
 :root {
-    --bg-color: #080808;
+    --bg-color: #000000;
     --second-bg-color: #131313;
     --text-color: white;
-    --main-color: #00ffee;
+    --main-color: #d13e3e;
 }
 
 html{
