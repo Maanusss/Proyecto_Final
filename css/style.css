@@ -71,6 +71,13 @@ body{
     border-bottom: 3px solid var(--main-color);
 }
 
+.bx-menu, .bx-x {
+    cursor: pointer; 
+    font-size: 30px; 
+    color: #0ff; 
+}
+
+
 #menu-icon{
     font-size: 3.6rem;
     color: var(--main-color);
@@ -530,4 +537,162 @@ span{
 #star{
     color: gold;
     font-size: 2rem;
+}
+
+/* Contact.HTML */
+
+.contact{
+    background-color: var(--bg-color);
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+    .service-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .testimonials .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact form{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+        font-size: 30px; /* Tamaño del icono */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+    }
+
+    .navbar {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Alinea elementos verticalmente */
+        position: absolute; /* Posición absoluta para el menú */
+        top: 60px; /* Ajusta según sea necesario */
+        right: 0;
+        background: #333; /* Color de fondo del menú */
+        width: 200px; /* Ajusta el ancho del menú */
+        z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .navbar .active{
+        display: flex;
+    }
+
+    .navbar a {
+        color: white; /* Color de texto de los enlaces */
+        padding: 15px; /* Espaciado alrededor de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+        display: block; /* Cada enlace ocupa toda la línea */
+    }
+
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .home-img img{
+        width: 56vw;
+    }
+
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
