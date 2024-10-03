@@ -26,55 +26,53 @@ body{
     color: var(--text-color);
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 4rem 12% 4rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+/* Estilos generales del header */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    padding: 15px 30px;
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para el navbar */
 }
 
-.logo{
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
+/* Estilo del logo */
+.header .logo {
+    font-size: 2.5rem;
+    color: #ffffff; /* Azul para el logo */
+    font-weight: bold;
+}
+
+.header .logo span {
+    color: #ff4c4c; /* Rojo para la parte resaltada del logo */
+}
+
+/* Estilo para los enlaces de navegación */
+.navbar a {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 2.2rem;
+    transition: color 0.3s ease;
+}
+
+
+.navbar a:hover {
+    color: #ff4c4c; 
+}
+
+/* Icono de menú hamburguesa (para dispositivos móviles) */
+#menu-icon {
+    font-size: 2rem;
+    color: #ffffff; /* Color blanco para el icono */
     cursor: pointer;
-    transition: 0.3s ease;
+    display: none; /* Oculto por defecto en pantallas grandes */
 }
-
-.logo:hover{
-    transform: scale(1.1);
-}
-
-.logo span{
-    text-shadow: 0 0 25px var(--main-color);
-}
-
-.navbar a{
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-} 
-
-.navbar a:hover,
-.navbar a.active{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
-}
-
 .bx-menu, .bx-x {
     cursor: pointer; 
     font-size: 30px; 
-    color: #0ff; 
+    color: rgb(255, 0, 0); 
 }
 
 
@@ -130,14 +128,13 @@ span{
     border-radius: 50%;
 }
 
-.home-img img{
-    position: relative;
-    top: 3rem;
-    width: 20vw;
-    border-radius: 25%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+.home-img img {
+    width: 100%; /* Haz que ocupe todo el ancho disponible */
+    max-width: 500px; /* Establece un tamaño máximo para no estirarla demasiado */
+    height: auto; /* Mantén las proporciones de la imagen */
+    border-radius: 20px; /* Mantén el borde redondeado */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Mantén el efecto de sombra */
+    object-fit: cover; /* Evita que se distorsione */
 }
 
 .home-img img:hover{
@@ -636,14 +633,15 @@ span{
     }
 
     .navbar {
-        display: none; /* Oculta el menú por defecto */
-        flex-direction: column; /* Alinea elementos verticalmente */
-        position: absolute; /* Posición absoluta para el menú */
-        top: 60px; /* Ajusta según sea necesario */
-        right: 0;
-        background: #333; /* Color de fondo del menú */
-        width: 200px; /* Ajusta el ancho del menú */
-        z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a1a;
+        position: fixed; /* Cambia a fixed para que flote sobre el contenido */
+        top: 70px; /* Ajusta la posición para que esté debajo del header */
+        left: 0;
+        padding: 15px 0;
+        z-index: 999; /* Asegúrate de que esté por encima de los otros elementos */
     }
 
     .header {
@@ -653,9 +651,12 @@ span{
         align-items: center;
     }
 
-    
-    .navbar .active{
+    .navbar.active {
         display: flex;
+    }
+
+    .menu-icon {
+        display: block;
     }
 
     .navbar a {
