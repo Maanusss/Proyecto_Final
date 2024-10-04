@@ -660,10 +660,11 @@ span{
     }
 
     .navbar a {
+        font-size: 14px;
         color: white; 
-        padding: 15px;
+        padding: 0px;
         text-decoration: none; 
-        display: block;
+        display: flex;
     }
 
     .home{
