@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -26,31 +28,30 @@ body{
     color: var(--text-color);
 }
 
-/* Estilos generales del header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #1a1a1a; /* Color de fondo oscuro */
-    color: #ffffff; /* Texto blanco */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para el navbar */
+    background-color: #1a1a1a; 
+    color: #ffffff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
-/* Estilo del logo */
+
 .header .logo {
     font-size: 2.5rem;
-    color: #ffffff; /* Azul para el logo */
+    color: #ffffff;
     font-weight: bold;
 }
 
 .header .logo span {
-    color: #ff4c4c; /* Rojo para la parte resaltada del logo */
+    color: #ff4c4c; 
 }
 
-/* Estilo para los enlaces de navegación */
+
 .navbar a {
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     text-decoration: none;
     margin-left: 30px;
     font-size: 2.2rem;
@@ -62,12 +63,12 @@ body{
     color: #ff4c4c; 
 }
 
-/* Icono de menú hamburguesa (para dispositivos móviles) */
+
 #menu-icon {
     font-size: 2rem;
-    color: #ffffff; /* Color blanco para el icono */
+    color: #ffffff; 
     cursor: pointer;
-    display: none; /* Oculto por defecto en pantallas grandes */
+    display: none;
 }
 .bx-menu, .bx-x {
     cursor: pointer; 
@@ -129,12 +130,12 @@ span{
 }
 
 .home-img img {
-    width: 100%; /* Haz que ocupe todo el ancho disponible */
-    max-width: 500px; /* Establece un tamaño máximo para no estirarla demasiado */
-    height: auto; /* Mantén las proporciones de la imagen */
-    border-radius: 20px; /* Mantén el borde redondeado */
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Mantén el efecto de sombra */
-    object-fit: cover; /* Evita que se distorsione */
+    width: 100%; 
+    max-width: 500px;
+    height: auto; 
+    border-radius: 20px; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    object-fit: cover; 
 }
 
 .home-img img:hover{
@@ -628,20 +629,19 @@ span{
 @media(max-width:895px){
     #menu-icon{
         display: block;
-        font-size: 30px; /* Tamaño del icono */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+        font-size: 30px; 
+        cursor: pointer; 
     }
 
     .navbar {
         display: none;
-        flex-direction: column;
+        flex-direction:row;
         width: 100%;
         background-color: #1a1a1a;
-        position: fixed; /* Cambia a fixed para que flote sobre el contenido */
-        top: 70px; /* Ajusta la posición para que esté debajo del header */
+        position:fixed; 
         left: 0;
-        padding: 15px 0;
-        z-index: 999; /* Asegúrate de que esté por encima de los otros elementos */
+        padding: 10px 0;
+        z-index: 999;
     }
 
     .header {
@@ -660,10 +660,10 @@ span{
     }
 
     .navbar a {
-        color: white; /* Color de texto de los enlaces */
-        padding: 15px; /* Espaciado alrededor de los enlaces */
-        text-decoration: none; /* Sin subrayado */
-        display: block; /* Cada enlace ocupa toda la línea */
+        color: white; 
+        padding: 15px;
+        text-decoration: none; 
+        display: block;
     }
 
     .home{
